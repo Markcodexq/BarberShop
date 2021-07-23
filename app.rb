@@ -27,7 +27,7 @@ post '/visit' do
 	@user = params[:user_name]
 	@phone = params[:user_phone]
 	@date = params[:date_time]
-	@choise = params[:choise]
+	@barber = params[:barber]
 	@color = params[:color]
 
 	# if @user == ""
@@ -68,10 +68,10 @@ post '/visit' do
 		return erb :visit
 	end
 	
-	@message = "Dear #{@user}, you will add to our system, phone is - #{@phone}, date - #{@date}, master - #{@choise}, color - #{@color}"
+	@message = "Dear #{@user}, you will add to our system, phone is - #{@phone}, date - #{@date}, master - #{@barber}, color - #{@color}"
 
 	f = File.open './public/users.txt', 'a'
-	f.write "User: #{@user}, Phone: #{@phone}, Date: #{@date}, Master: #{@choise}, Color: #{@color}\n"
+	f.write "User: #{@user}, Phone: #{@phone}, Date: #{@date}, Master: #{@barber}, Color: #{@color}\n"
 	f.close
 	erb :visit
 end

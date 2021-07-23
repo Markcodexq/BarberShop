@@ -20,12 +20,12 @@
   </div> <br>
   
   <div class="mb-3">
-  <label for="choise" class="form-label">Your Barber</label>
-  <select class="form-control" name="choise" aria-label="Default select example">
+  <label for="barber" class="form-label">Your Barber</label>
+  <select class="form-control" name="barber" aria-label="Default select example">
   <option selected>Choose the master</option>
-  <option value="Walter">Walter White</option>
-  <option value="Jessie">Jessie Pinkman</option>
-  <option value="Gus">Gus Fring</option>
+  <option value="Walter"<%= @barber == 'Walter'? 'selected' : ''%>>Walter White</option>
+  <option value="Jessie"<%= @barber == 'Jessie'? 'selected' : ''%>>Jessie Pinkman</option>
+  <option value="Gus" <%= @barber == 'Gus'? 'selected' : ''%>>Gus Fring</option>
 </select>
 </div><br>
 
