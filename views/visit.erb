@@ -1,0 +1,59 @@
+<h2>Записаться</h2>
+<p>На этой странице вы можете записаться к нашему мастеру.</p>
+<div class="alert alert-success"><%=@message%></div> 
+<form action="/visit" method="POST">
+  
+  <div class="mb-3">
+    <label for="name" class="form-label">Your name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter your name" name="user_name" value="<%=@user%>">
+    <div id="emailHelp" class="form-text">We'll never share your name with anyone else.</div>
+  </div>
+  
+  <div class="mb-3">
+    <label for="phone" class="form-label">Your phone</label>
+    <input type="phone" class="form-control" id="phone" placeholder="8(9_ _)_ _ _-_ _-_ _" name="user_phone" value="<%=@phone%>">
+  </div>
+  
+  <div class="mb-3">
+    <label for="date" class="form-label">Date</label>
+    <input type="date" class="form-control" id="date" name="date_time" value="<%=@date%>">
+  </div> <br>
+  
+  <div class="mb-3">
+  <label for="choise" class="form-label">Your Barber</label>
+  <select class="form-control" name="choise" aria-label="Default select example">
+  <option selected>Choose the master</option>
+  <option value="Walter">Walter White</option>
+  <option value="Jessie">Jessie Pinkman</option>
+  <option value="Gus">Gus Fring</option>
+</select>
+</div><br>
+
+<div class="mb-3">
+<label for="color" class="form-label">Color picker</label>
+<select id="color" name="color">
+  <option value="#7bd148">Green</option>
+  <option value="#5484ed">Bold blue</option>
+  <option value="#a4bdfc">Blue</option>
+  <option value="#46d6db">Turquoise</option>
+  <option value="#7ae7bf">Light green</option>
+  <option value="#51b749">Bold green</option>
+  <option value="#fbd75b">Yellow</option>
+  <option value="#ffb878">Orange</option>
+  <option value="#ff887c">Red</option>
+  <option value="#dc2127">Bold red</option>
+  <option value="#dbadff">Purple</option>
+  <option value="#e1e1e1">Gray</option>
+</select>
+</div>
+  <button type="submit" class="btn btn-primary">Записаться</button>
+</form>
+
+<script type="text/javascript">
+$(function() {
+  $('label').css('background-color','yellow');
+  $('#color').simplecolorpicker();
+});
+
+
+</script>

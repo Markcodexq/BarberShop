@@ -1,0 +1,20 @@
+<h2>Контакты</h2>
+<h3><%=@send%></h3>
+<form action="/contacts" method="POST">
+<div class="mb-3">
+    <label for="name" class="form-label">Your name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter your name" name="e_name">
+  </div>
+ <div class="mb-3">
+    <label for="name" class="form-label">Your email</label>
+    <input type="email" class="form-control" id="name" placeholder="Enter your email" name="email">
+  </div>
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Your text</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter your message" name="e_text">
+  </div>
+ 
+<button type="submit" class="btn btn-primary">Записаться</button>
+
+  </form>
